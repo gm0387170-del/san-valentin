@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para ti 💘</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            max-width: 420px;
+        }
+
+        h1 {
+            color: #e63946;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            position: relative;
+            height: 60px;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        #yes {
+            background: #e63946;
+            color: white;
+        }
+
+        #no {
+            background: #ddd;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>💘 Hola, MI VIDA 💘</h1>
+    <p>
+        Soy <strong>DANIEL </strong> mi amor te queria decir que te amo muchoooo…<br><br>
+        ¿Quieres ser mi San Valentín? 🥰
+    </p>
+
+    <div class="buttons">
+        <button id="yes" onclick="acepta()">Sí 💖</button>
+        <button id="no" onmouseover="mover()">No 💔</button>
+    </div>
+</div>
+
+<script>
+    function acepta() {
+        document.body.innerHTML = `
+            <div style="
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background: linear-gradient(135deg, #ff758c, #ff7eb3);
+                font-family: Poppins, sans-serif;
+                text-align:center;
+            ">
+                <h1 style="color:white;">
+                    💕 Gracias por decir que sí 💕<br>
+                    TE AMOOOOO MUCHOOOOOOO MI NIÑA HERMOSA 🥰
+                </h1>
+            </div>
+        `;
+    }
+
+    function mover() {
+        const no = document.getElementById("no");
+        const x = Math.random() * 250;
+        const y = Math.random() * 50;
+        no.style.transform = `translate(${x}px, ${y}px)`;
+    }
+</script>
+
+</body>
+</html>
